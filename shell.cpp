@@ -28,7 +28,18 @@ int main( ) {
       continue;
 
     // set background true if the last character is '&'.
+    if (fullLine[fullLine.size()-1] == '&'){
+        background = true;
+    }
+
+    cout << fullLine << endl;
+
     // if the last character is '&' or ';', replace it with a space ' '.
+    if (fullLine[fullLine.size()-1] == '&' || fullLine[fullLine.size()-1] == ';'){
+        fullLine[fullLine.size()-1] = ' ';
+    }
+
+    cout << fullLine << endl; 
     
     const char* delimiter = " ";
     // tokenize fullLine with a space.
